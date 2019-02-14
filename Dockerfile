@@ -16,7 +16,7 @@ RUN mvn package -DskipTests
 FROM openjdk:8-jre-alpine
 
 # Copy the jar to the production image from the builder stage.
-COPY --from=builder /app/target/exec-*.jar /app.jar
+COPY --from=builder /app/target/*.jar /app.jar
 
 # Service must listen to $PORT environment variable.
 # This default value facilitates local development.
