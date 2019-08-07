@@ -36,7 +36,6 @@ public class EventListener {
     @JsonDeserialize(as = ClazzDayRegistered.class)
     public void handleClazzDay(@Payload ClazzDayRegistered clazzDayRegistered) {
 
-        clazzDayRegistered.
 
         System.out.println("제목 : [마감임박] "+ clazzDayRegistered.getTitle() + " 강의가 개설되었습니다");
         System.out.println("내용 : 일시: "+ clazzDayRegistered.getDate());
